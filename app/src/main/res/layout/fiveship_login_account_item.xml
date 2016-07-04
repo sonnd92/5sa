@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="62.0dip"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp">
+    <!--android:background="@drawable/com_garena_gamecenter_item_selector_white"-->
+
+    <ImageView
+        android:id="@+id/fiveship_login_account_item_avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/fiveship_login_account_item_email"
+        style="@style/fiveship_login_account_text.singleline"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:paddingLeft="16dp" />
+
+    <ImageView
+        android:id="@+id/fiveship_login_account_item_password"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:src="@drawable/fiveship_button_circle_cross" />
+</LinearLayout>

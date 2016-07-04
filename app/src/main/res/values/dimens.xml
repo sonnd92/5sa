@@ -1,0 +1,89 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="fiveship_achievement_game_item_height">74.0dip</dimen>
+    <dimen name="fiveship_achievement_game_item_primary_text_size">17.0sp</dimen>
+    <dimen name="fiveship_achievement_item_height">68.0dip</dimen>
+    <dimen name="fiveship_achievement_item_icon_size">57.0dip</dimen>
+    <dimen name="fiveship_achievement_item_primary_text_size">15.0sp</dimen>
+    <dimen name="fiveship_achievement_item_secondary_text_size">12.0sp</dimen>
+    <dimen name="fiveship_action_bar_height">56.0dip</dimen>
+    <dimen name="fiveship_action_bar_icon_width">50.0dip</dimen>
+    <dimen name="fiveship_action_bar_text_size">20.0sp</dimen>
+    <dimen name="fiveship_avatar_size">50.0dip</dimen>
+    <dimen name="fiveship_avatar_size_exlarge">68.0dip</dimen>
+    <dimen name="fiveship_avatar_size_large">60.0dip</dimen>
+    <dimen name="fiveship_avatar_size_small">40.0dip</dimen>
+    <dimen name="fiveship_banner_height">120.0dip</dimen>
+    <dimen name="fiveship_btn_text_size">18.0sp</dimen>
+    <dimen name="fiveship_chat_footer_text_size">11.0sp</dimen>
+    <dimen name="fiveship_default_button_height">48.0dip</dimen>
+    <dimen name="fiveship_default_text_size">16.0sp</dimen>
+    <dimen name="fiveship_dialog_button_text_size">16.0sp</dimen>
+    <dimen name="fiveship_dialog_title_text_size">20.0sp</dimen>
+    <dimen name="fiveship_divider_size">1.0px</dimen>
+    <dimen name="fiveship_drop_down_meun_width">168.0dip</dimen>
+    <dimen name="fiveship_find_buddies_result_section_height">28.0dip</dimen>
+    <dimen name="fiveship_find_buddies_result_section_horizontal_padding">20.0dip</dimen>
+    <dimen name="fiveship_flat_button_height">36.0dip</dimen>
+    <dimen name="fiveship_game_details_size_text_size">12.0sp</dimen>
+    <dimen name="fiveship_game_details_title_text_size">18.0sp</dimen>
+    <dimen name="fiveship_game_list_item_badge_height">25.0dip</dimen>
+    <dimen name="fiveship_game_list_item_badge_text_size">12.0sp</dimen>
+    <dimen name="fiveship_game_list_item_button_height">35.0dip</dimen>
+    <dimen name="fiveship_game_list_item_height">68.0dip</dimen>
+    <dimen name="fiveship_game_list_item_icon_size">56.0dip</dimen>
+    <dimen name="fiveship_game_list_item_primary_text_size">18.0sp</dimen>
+    <dimen name="fiveship_game_list_item_secondary_text_size">12.0sp</dimen>
+    <dimen name="fiveship_item_drawable_padding">14.0dip</dimen>
+    <dimen name="fiveship_item_height">48.0dip</dimen>
+    <dimen name="fiveship_item_horizontal_padding">16.0dip</dimen>
+    <dimen name="fiveship_item_vertical_padding">8.0dip</dimen>
+    <dimen name="fiveship_section_margin_top">18.0dp</dimen>
+    <dimen name="dialog_min_width">270.0dip</dimen>
+    <dimen name="dialog_button_text_size">15.0sp</dimen>
+    <dimen name="dialog_button_size">45.0dip</dimen>
+    <dimen name="dialog_title_text_size">20.0sp</dimen>
+    <dimen name="dialog_padding">10.0dip</dimen>
+    <dimen name="dialog_title_size">60.0dip</dimen>
+    <dimen name="dialog_text_size">16.0sp</dimen>
+    <dimen name="dialog_vertical_divider_margin">7.0dp</dimen>
+    <dimen name="margin_list_big">10.0dip</dimen>
+    <dimen name="text_list">13.0sp</dimen>
+    <dimen name="text_state_change">15.0sp</dimen>
+    <dimen name="text_list_title">16.0sp</dimen>
+    <dimen name="popup_padding">15.0dip</dimen>
+    <dimen name="margin_list">7.0dp</dimen>
+    <!--Menu main-->
+    <dimen name="menu_layout_width">300.0dp</dimen>
+    <dimen name="text_menu">15.0sp</dimen>
+    <dimen name="text_menu_title">12.0dp</dimen>
+    <dimen name="menu_left_indicator_width">7.0dp</dimen>
+    <dimen name="margin_menu_item">20.0dp</dimen>
+    <dimen name="margin_menu_right">10.0dp</dimen>
+    <dimen name="navigator_margin_header">10dp</dimen>
+    <dimen name="navigator_item_height">50.0dip</dimen>
+    <dimen name="navigator_divider_height">0.5dip</dimen>
+    <!--End-->
+    <dimen name="detail_backdrop_height">256dp</dimen>
+    <dimen name="card_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="list_item_avatar_size">40dp</dimen>
+    <dimen name="license_image_width">80dp</dimen>
+    <dimen name="license_image_height">80dp</dimen>
+
+    <dimen name="badge_text_size">8dp</dimen>
+    <dimen name="edit_text_default_height">35.0dip</dimen>
+    <dimen name="time_box_list_view_width">80dp</dimen>
+    <dimen name="shop_order_divider_margin_left">90dp</dimen>
+    <dimen name="dot_layout_margin_left">8dp</dimen>
+    <dimen name="dot_repeat_width">3dp</dimen>
+    <dimen name="ic_clear_margin">16dp</dimen>
+    <dimen name="star_image_width">12dp</dimen>
+    <dimen name="star_image_height">13dp</dimen>
+
+    <dimen name="tool_tip_max_width">250dp</dimen>
+
+</resources>

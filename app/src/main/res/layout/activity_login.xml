@@ -1,0 +1,230 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_tab_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    tools:mContext=".activity.LoginActivity">
+
+    <ScrollView
+        android:id="@+id/fiveship_form_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_below="@id/app_bar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/login_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="15.0dp"
+            android:paddingLeft="25.0dp"
+            android:paddingRight="25.0dp"
+            android:paddingTop="15.0dp"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/title_activity_splash_screen"
+                android:paddingBottom="15dp"
+                android:paddingTop="45dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_logo_white" />
+
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="5SHIP.VN"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />-->
+
+            <LinearLayout
+                android:id="@+id/login_account_area"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3.0dip"
+                android:layout_marginRight="3.0dip"
+                android:layout_marginTop="5.0dip"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.0dip"
+                    android:layout_marginRight="3.0dip"
+                    android:paddingTop="5.0dip"
+                    android:theme="@style/LoginInputLayout">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1.0dp"
+                        android:drawableLeft="@drawable/ic_user_login"
+                        android:drawablePadding="20dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/email_field"
+                        android:textColorHint="@color/fiveship_common_white"
+                        android:imeOptions="actionNext"
+                        android:textColor="@color/fiveship_common_white"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:textSize="18.0sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.0dip"
+                    android:layout_marginRight="3.0dip"
+                    android:paddingTop="5.0dip"
+                    android:theme="@style/LoginInputLayout">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1.0dp"
+                        android:drawableLeft="@drawable/ic_pass_login"
+                        android:imeOptions="actionGo"
+                        android:inputType="textPassword"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:drawablePadding="20dp"
+                        android:textColorHint="@color/fiveship_common_white"
+                        android:textColor="@color/fiveship_common_white"
+                        android:gravity="center_vertical"
+                        android:hint="@string/password_field"
+                        android:singleLine="true"
+                        android:textSize="18.0sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_orange_radius_background"
+                    android:paddingLeft="10dp"
+                    android:text="@string/btn_login_text"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/forgot_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quên mật khẩu"
+                    android:textColor="#d9d9d9"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#bebebe"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="HOẶC"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#bebebe"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.facebook.login.widget.LoginButton
+                xmlns:fb="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/signin_facebook"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/btn_bigblueshadow"
+                android:drawableLeft="@drawable/facebook_button_icon"
+                android:gravity="center"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:visibility="gone"
+                fb:login_text="@string/com_facebook_loginview_log_in_button" />
+
+            <TextView
+                android:id="@+id/sign_in_facebook"
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_facebook_login"
+                android:background="@drawable/facebook_login_border"
+                android:text="Đăng nhập nhanh qua Facebook"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#64ffffff"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bạn chưa có tài khoản? "
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/register_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:text="@string/register_text_link"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</RelativeLayout>

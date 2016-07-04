@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/fiveship_form_input"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/dialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:textColor="#383C47" />
+
+            <TextView
+                android:id="@+id/btn_shop_create_chosen_ship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:layout_weight="0"
+                android:background="@drawable/btn_chosen_ship_radius_background"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="Chọn mẫu"
+                android:textColor="#A1A1A1"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/FloatingHintLabel">
+
+                <fiveship.vn.fiveship.widget.DelayAutocompleteTextView
+                    android:id="@+id/txt_customer_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_phone"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:drawablePadding="10dp"
+                    android:hint="Số điện thoại khách"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null" />
+            </android.support.design.widget.TextInputLayout>
+
+            <com.victor.loading.rotate.RotateLoading
+                android:id="@+id/li_suggest_customer"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:loading_width="2dp"
+                app:loading_color="@color/colorPrimary"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="end"/>
+
+        </FrameLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/FloatingHintLabel">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/txt_shop_ship_create_to_home"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_home"
+                android:hint="Số nhà/ Ngõ / Ngách"
+                android:drawablePadding="10dp"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:textCursorDrawable="@null" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/FloatingHintLabel">
+
+                    <fiveship.vn.fiveship.widget.DelayAutocompleteTextView
+                        android:id="@+id/txt_shop_ship_create_to_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_marker"
+                        android:drawablePadding="10dp"
+                        android:hint="Đường phố"
+                        android:imeOptions="flagNoExtractUi|actionSearch"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@null" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.victor.loading.rotate.RotateLoading
+                    android:id="@+id/li_delivery_add"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:loading_width="2dp"
+                    app:loading_color="@color/colorPrimary"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="end"/>
+
+            </FrameLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/pre_pay_and_shipping_cost_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:theme="@style/FloatingHintLabel">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/txt_shop_ship_create_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_money"
+                    android:drawableStart="@drawable/ic_money"
+                    android:drawableRight="@drawable/ic_k"
+                    android:drawableEnd="@drawable/ic_k"
+                    android:drawablePadding="10dp"
+                    android:hint="Tiền hàng"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:theme="@style/FloatingHintLabel">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/txt_shop_ship_create_cost_ship"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_money"
+                    android:drawableStart="@drawable/ic_money"
+                    android:drawableRight="@drawable/ic_k"
+                    android:drawableEnd="@drawable/ic_k"
+                    android:drawablePadding="10dp"
+                    android:hint="Tiền ship"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/FloatingHintLabel">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/txt_shop_ship_create_note"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_note"
+                android:drawablePadding="10dp"
+                android:hint="Ghi chú"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:textCursorDrawable="@null" />
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+</ScrollView>

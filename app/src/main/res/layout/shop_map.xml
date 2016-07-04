@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:mContext=".activity.shop.ShopMapFragment">
+
+    <LinearLayout
+        android:id="@+id/txt_shipper"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@color/transparent"
+                android:gravity="left|center"
+                android:text="Có"
+                android:textColor="#585B6C" />
+
+            <TextView
+                android:id="@+id/txt_number_shipper"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@color/transparent"
+                android:gravity="left|center"
+                android:text="..."
+                android:textColor="#FF642E" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@color/transparent"
+                android:gravity="left|center"
+                android:text=" shipper gần bạn"
+                android:textColor="#585B6C" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btn_list_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/ic_map_refresh" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/shop_map_shipper"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.victor.loading.rotate.RotateLoading
+            android:id="@+id/rotateloading"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|left"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            app:loading_color="@color/colorPrimary"
+            app:loading_width="3dp" />
+    </FrameLayout>
+
+</LinearLayout>

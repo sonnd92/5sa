@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/common_popup_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="Bạn có chắc muốn hủy đơn hàng này?"
+            android:textColor="#f15a21"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/ic_close_dialog"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_remove_small"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_shipping_order_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Đơn hàng: Tẩy bút xóa 2k16"
+        android:textColor="#b1b1b1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#e7e7e7" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Lý do hủy đơn hàng của bạn là gì?"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rg_select_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <RadioButton
+            android:id="@+id/rb_1"
+            style="@style/CancelRadioButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reason_cancel_shipper_dont_get_merchandise" />
+
+        <RadioButton
+            android:id="@+id/rb_2"
+            style="@style/CancelRadioButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reason_cancel_customer_cancel_deals" />
+
+        <RadioButton
+            android:id="@+id/rb_4"
+            style="@style/CancelRadioButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reason_cancel_shop_has_found_other_one" />
+
+        <RadioButton
+            android:id="@+id/rb_3"
+            style="@style/CancelRadioButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reason_cancel_create_in_wrong_info" />
+
+        <RadioButton
+            android:id="@+id/rb_other_reason"
+            style="@style/CancelRadioButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reason_cancel_other_reason" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/input_other_reason_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/edit_text_border_background"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/tv_other_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:hint="Nhập lý do..."
+            android:padding="15dp"
+            android:textColorHint="#cacaca" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dialog_button_size"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_no"
+            style="@style/FiveShip.DialogStyle.Button"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="Đóng"
+            android:textColor="@color/grey_DA" />
+
+        <Button
+            android:id="@+id/btn_yes"
+            style="@style/FiveShip.DialogStyle.Button"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="Đồng ý hủy" />
+
+    </LinearLayout>
+
+</LinearLayout>

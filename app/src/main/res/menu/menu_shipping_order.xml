@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:mContext=".activity.shipper.ShippingOrderFragment">
+    <!--<item
+        android:id="@+id/action_map"
+        android:icon="@drawable/toolbar_location"
+        android:orderInCategory="1"
+        android:title="@string/map_toolbar_title"
+        app:showAsAction="always" />-->
+    <!--<item
+        android:id="@+id/action_notification"
+        android:icon="@drawable/notifi"
+        android:orderInCategory="2"
+        android:title="@string/notification_toolbar_title"
+        app:showAsAction="always" />-->
+    <item
+        android:id="@+id/action_quest"
+        android:icon="@drawable/ic_menu_quest"
+        android:orderInCategory="2"
+        android:title="Nhiệm vụ"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/action_notification"
+        android:icon="@drawable/ic_menu_notifications"
+        android:orderInCategory="2"
+        android:title="@string/notification_toolbar_title"
+        app:showAsAction="always" />
+    <!--<item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_action_search"
+        android:orderInCategory="3"
+        android:title="@string/search_toolbar_title"
+        app:showAsAction="always" />-->
+
+</menu>

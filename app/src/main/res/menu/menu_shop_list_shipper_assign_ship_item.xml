@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/detail_shipper_assign_ship"
+        android:title="Chi tiết shipper"
+        android:visible="true"
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/allow_accept_ship"
+        android:title="Cho phép nhận đơn"
+        android:visible="true"
+        app:showAsAction="ifRoom|withText" />
+
+</menu>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/less_than_fifty"
+        app:showAsAction="ifRoom|withText"
+        android:title="@string/less_than_fifty_k"
+        android:titleCondensed="lessThanFiftyK"
+        android:visible="true"/>
+    <item
+        android:id="@+id/between_fifty_and_one_hundred"
+        android:title="@string/between_fifty_and_one_hundred_k"
+        android:visible="true"
+        android:titleCondensed="betweenFiftyAndOneHundredK"
+        app:showAsAction="ifRoom|withText"/>
+    <item
+        android:id="@+id/bigger_than_one_hundred"
+        app:showAsAction="ifRoom|withText"
+        android:title="@string/bigger_than_one_hundred_k"
+        android:titleCondensed="biggerThanOneHundredK"
+        android:visible="true"/>
+</menu>

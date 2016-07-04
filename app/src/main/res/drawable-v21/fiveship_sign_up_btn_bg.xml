@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/fiveship_item_pressed_ripple"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <selector>
+            <item android:state_pressed="true">
+                <shape android:shape="rectangle">
+                    <corners android:radius="2.0dip" />
+                    <solid android:color="@color/fiveship_item_pressed" />
+                    <stroke android:width="1.0dip" android:color="@color/colorPrimaryLight" />
+                </shape>
+            </item>
+            <item android:state_focused="true">
+                <shape android:shape="rectangle">
+                    <corners android:radius="2.0dip" />
+                    <solid android:color="@color/fiveship_item_pressed" />
+                    <stroke android:width="1.0dip" android:color="@color/colorPrimaryLight" />
+                </shape>
+            </item>
+            <item android:state_enabled="false">
+                <shape android:shape="rectangle">
+                    <corners android:radius="2.0dip" />
+                    <solid android:color="@android:color/transparent" />
+                    <stroke android:width="1.0dip" android:color="@color/fiveship_default_button_text_color_dark" />
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="2.0dip" />
+                    <solid android:color="@android:color/transparent" />
+                    <stroke android:width="1.0dip" android:color="@color/colorPrimaryLight" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>

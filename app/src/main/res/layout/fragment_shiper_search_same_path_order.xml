@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_popup_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:theme="@style/FloatingHintLabel">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <fiveship.vn.fiveship.widget.DelayAutocompleteTextView
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_marker"
+                    android:drawablePadding="20dp"
+                    android:hint="Bạn đi từ"
+                    android:imeOptions="flagNoExtractUi|actionSearch"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@null" />
+            </android.support.design.widget.TextInputLayout>
+
+            <com.victor.loading.rotate.RotateLoading
+                android:id="@+id/li_et_address"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:loading_width="2dp"
+                app:loading_color="@color/colorPrimary"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="end"/>
+
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/btn_local_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/ic_gps"
+            android:scaleType="centerCrop"
+            android:background="@color/transparent"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/FloatingHintLabel">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <fiveship.vn.fiveship.widget.DelayAutocompleteTextView
+                android:id="@+id/et_received_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_marker"
+                android:drawablePadding="20dp"
+                android:hint="Đến"
+                android:imeOptions="flagNoExtractUi|actionSearch"
+                android:singleLine="true"
+                android:textCursorDrawable="@null" />
+        </android.support.design.widget.TextInputLayout>
+
+        <com.victor.loading.rotate.RotateLoading
+            android:id="@+id/li_et_received_address"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:loading_width="2dp"
+            app:loading_color="@color/colorPrimary"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="end"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dialog_button_size"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_no"
+            style="@style/FiveShip.DialogStyle.Button"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="Đóng" />
+
+        <View
+            style="@style/FiveShip.DialogStyle.ButtonDivider"
+            android:layout_width="1.0dip"
+            android:layout_height="fill_parent" />
+
+        <Button
+            android:id="@+id/btn_yes"
+            style="@style/FiveShip.DialogStyle.Button"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="Tìm kiếm" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:mContext="fiveship.vn.fiveship.activity.RatingFragment">
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/RatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/et_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:hint="Nhận xét"
+        android:imeOptions="actionNext"
+        android:padding="15dp"
+        android:singleLine="true"
+        android:textColor="@color/fiveship_edit_text_login"
+        android:textColorHint="@color/fiveship_txt_color_hint_white"
+        android:textSize="18.0sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="3.0dip"
+        android:layout_marginRight="3.0dip"
+        android:background="@color/fiveship_list_divider" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="3.0dip"
+        android:layout_marginRight="3.0dip"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        app:hintTextAppearance="@style/FloatingHintLabel">
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/cb_shipper_amity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1.0dp"
+            android:text="Chọn làm shipper ruột"
+            android:textColor="@color/fiveship_edit_text_login"
+            android:textCursorDrawable="@null"
+            android:textSize="18.0sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="right">
+
+        <Button
+            android:id="@+id/btn_close_rating"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:text="Đóng"
+            android:textColor="@color/fship_text_button_dialog" />
+
+        <Button
+            android:id="@+id/btn_send_rating"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/btn_close_rating"
+            android:background="@color/transparent"
+            android:text="Gửi đánh giá"
+            android:textColor="@color/fship_text_button_dialog" />
+
+    </RelativeLayout>
+
+</LinearLayout>

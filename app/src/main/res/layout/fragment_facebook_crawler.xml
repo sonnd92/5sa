@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fb_crawler_backgroud"
+    tools:mContext="fiveship.vn.fiveship.activity.shipper.FacebookCrawlerFragment">
+
+    <LinearLayout
+        android:id="@+id/btn_pinned_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_pin_order"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/ic_arrow_right_dark"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:text="Đơn hàng đã ghim"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@color/fiveship_common_white"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_data_binding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_pinned_order"
+        android:layout_marginTop="1dp"
+        android:fadeScrollbars="true"
+        android:scrollbars="vertical" />
+
+    <include
+        android:id="@+id/vs_no_result"
+        layout="@layout/fiveship_no_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+    <include
+        android:id="@+id/layout_loading"
+        layout="@layout/fiveship_loading_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

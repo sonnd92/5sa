@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="fiveship.vn.fiveship">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.Access" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <permission
+        android:name="com.example.manyexampleapp.gcm.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/MyMaterialTheme.Base"
+        tools:replace="android:theme">
+        <activity
+            android:name=".activity.shipper.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/title_login_activity" />
+        <activity
+            android:name=".activity.NotificationActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_notification"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.EditCustomerInfoActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_edit_customer_info"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.SplashScreenActivity"
+            android:label="@string/title_activity_splash_screen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_register"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.shipper.DetailOrderActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_detail_order"
+            android:launchMode="singleTask"
+            android:taskAffinity="" />
+        <activity
+            android:name=".activity.shipper.SearchActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_search"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.shop.ShopActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shop.ShopShipDetailActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.shop.ShopShipCreateActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Thêm mới đơn hàng"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.shop.ShopShipCreateTemplateActivity"
+            android:label="Thêm mới mẫu đơn hàng"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.shop.ShopListShipperAssignShip"
+            android:label="Danh sách shipper đăng ký ship"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.shipper.ListOrderInPlaceActivity"
+            android:label="@string/title_activity_list_order_in_place" />
+        <activity
+            android:name=".activity.shipper.DirectionActivity"
+            android:label="@string/title_activity_direction" />
+        <activity
+            android:name=".activity.shop.ShopTrackingShipperActivity"
+            android:label="Vị trí đơn hàng" />
+        <activity
+            android:name=".activity.shipper.ShipperListNearActivity"
+            android:label="Đơn hàng xung quanh" />
+        <activity
+            android:name=".activity.shipper.QuestListActivity"
+            android:label="Nhiệm vụ phần thưởng" />
+        <activity
+            android:name=".activity.GalleryActivity"
+            android:label="Gallery" />
+        <activity
+            android:name=".activity.shipper.ShipHistoryTradeActivity"
+            android:label="Tài khoản" />
+        <activity
+            android:name=".activity.HelloActivity"
+            android:label="@string/title_activity_hello" />
+        <activity
+            android:name=".activity.shipper.ListOrderOfArrayIdActivity"
+            android:label="Danh sách đơn tiện đường" />
+        <activity
+            android:name=".activity.WarningActivity"
+            android:label="5Ship" />
+        <activity
+            android:name=".activity.shop.ShopCreateGroupOrderActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service
+            android:name=".activity.FShipService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name=".other.AlarmReceiver">
+            <intent-filter>
+                <category android:name="fiveship.vn.fiveship" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Will not be called unless the application explicitly enables it -->
+        <receiver
+            android:name=".other.DeviceBootReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- [START gcm_receiver] -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="fiveship.vn.fiveship" />
+            </intent-filter>
+        </receiver>
+        <!-- [END gcm_receiver] -->
+
+
+        <!-- [START gcm_listener] -->
+        <service
+            android:name=".gcm.MyGcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <!-- [END gcm_listener] -->
+        <!-- [START instanceId_listener] -->
+        <service
+            android:name=".gcm.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <!-- [END instanceId_listener] -->
+        <service
+            android:name=".gcm.RegistrationIntentService"
+            android:exported="false" />
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+
+        <!--
+            <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_map_app_api" />
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_geo_api_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider965933693472538"
+            android:exported="true" />
+
+        <activity android:name=".activity.shipper.PinnedFbCrawlerActivity" />
+        <activity android:name=".activity.NewsDetailActivity" />
+        <activity android:name=".activity.shop.RatingAndReviewShipperActivity"></activity>
+    </application>
+
+</manifest>

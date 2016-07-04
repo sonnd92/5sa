@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#EBEBEB"
+    android:scrollbars="none"
+    tools:mContext=".activity.shop.ShopNavigatorFragment">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_menu_right">
+
+        <include
+            layout="@layout/main_menu_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/shop_ship_menu_home"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/menu_selector"
+            android:drawableLeft="@drawable/ic_ship_direction"
+            android:drawablePadding="@dimen/margin_list_big"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_menu_item"
+            android:paddingRight="@dimen/margin_menu_right"
+            android:text="Shipper gần bạn"
+            android:textColor="@color/text_menu_title"
+            android:textSize="@dimen/text_menu" />
+
+        <TextView
+            android:id="@+id/shop_ship_menu_create"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/menu_selector"
+            android:drawableLeft="@drawable/icon_menu_add"
+            android:drawablePadding="@dimen/margin_list_big"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_menu_item"
+            android:paddingRight="@dimen/margin_menu_right"
+            android:text="Tạo đơn hàng"
+            android:textColor="@color/text_menu_title"
+            android:textSize="@dimen/text_menu" />
+
+        <TextView
+            android:id="@+id/shop_ship_menu_list"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/menu_selector"
+            android:drawableLeft="@drawable/ic_list_ship"
+            android:drawablePadding="@dimen/margin_list_big"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_menu_item"
+            android:paddingRight="@dimen/margin_menu_right"
+            android:text="Quản lý đơn hàng"
+            android:textColor="@color/text_menu_title"
+            android:textSize="@dimen/text_menu" />
+
+        <LinearLayout
+            android:id="@+id/box_menu_ship"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/shop_ship_menu_all"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/menu_selector"
+                android:drawablePadding="@dimen/margin_list_big"
+                android:gravity="center_vertical"
+                android:paddingLeft="80dp"
+                android:paddingRight="@dimen/margin_menu_right"
+                android:text="Tất cả đơn hàng"
+                android:textColor="@color/text_menu_title"
+                android:textSize="@dimen/text_menu" />
+
+            <TextView
+                android:id="@+id/shop_ship_menu_wait"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/menu_selector"
+                android:drawablePadding="@dimen/margin_list_big"
+                android:gravity="center_vertical"
+                android:paddingLeft="80dp"
+                android:paddingRight="@dimen/margin_menu_right"
+                android:text="Chờ shipper nhận"
+                android:textColor="@color/text_menu_title"
+                android:textSize="@dimen/text_menu" />
+
+            <TextView
+                android:id="@+id/shop_ship_menu_receive"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/menu_selector"
+                android:drawablePadding="@dimen/margin_list_big"
+                android:gravity="center_vertical"
+                android:paddingLeft="80dp"
+                android:paddingRight="@dimen/margin_menu_right"
+                android:text="Chờ nhận hàng"
+                android:textColor="@color/text_menu_title"
+                android:textSize="@dimen/text_menu" />
+
+            <TextView
+                android:id="@+id/shop_ship_menu_shipping"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/menu_selector"
+                android:drawablePadding="@dimen/margin_list_big"
+                android:gravity="center_vertical"
+                android:paddingLeft="80dp"
+                android:paddingRight="@dimen/margin_menu_right"
+                android:text="Đang giao"
+                android:textColor="@color/text_menu_title"
+                android:textSize="@dimen/text_menu" />
+
+            <TextView
+                android:id="@+id/shop_ship_menu_end"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/menu_selector"
+                android:drawablePadding="@dimen/margin_list_big"
+                android:gravity="center_vertical"
+                android:paddingLeft="80dp"
+                android:paddingRight="@dimen/margin_menu_right"
+                android:text="Đã giao"
+                android:textColor="@color/text_menu_title"
+                android:textSize="@dimen/text_menu" />
+
+            <TextView
+                android:id="@+id/shop_ship_menu_complete"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/menu_selector"
+                android:drawablePadding="@dimen/margin_list_big"
+                android:gravity="center_vertical"
+                android:paddingLeft="80dp"
+                android:paddingRight="@dimen/margin_menu_right"
+                android:text="Kết thúc"
+                android:textColor="@color/text_menu_title"
+                android:textSize="@dimen/text_menu" />
+
+            <TextView
+                android:id="@+id/shop_ship_menu_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/menu_selector"
+                android:drawablePadding="@dimen/margin_list_big"
+                android:gravity="center_vertical"
+                android:paddingLeft="80dp"
+                android:paddingRight="@dimen/margin_menu_right"
+                android:text="Hủy"
+                android:textColor="@color/text_menu_title"
+                android:textSize="@dimen/text_menu" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/shop_ship_menu_create_template"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/menu_selector"
+            android:drawableLeft="@drawable/ic_list_ship"
+            android:drawablePadding="@dimen/margin_list_big"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_menu_item"
+            android:paddingRight="@dimen/margin_menu_right"
+            android:text="Quản lý mẫu đơn hàng"
+            android:textColor="@color/text_menu_title"
+            android:textSize="@dimen/text_menu" />
+
+        <TextView
+            android:id="@+id/shop_ship_menu_shipper_manager"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/menu_selector"
+            android:drawableLeft="@drawable/ic_menu_shipper_mng"
+            android:drawablePadding="@dimen/margin_list_big"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_menu_item"
+            android:paddingRight="@dimen/margin_menu_right"
+            android:text="Quản lý shipper"
+            android:textColor="@color/text_menu_title"
+            android:textSize="@dimen/text_menu" />
+
+        <TextView
+            android:id="@+id/shop_ship_menu_capture"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/menu_selector"
+            android:drawableLeft="@drawable/icon_menu_capture"
+            android:drawablePadding="@dimen/margin_list_big"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_menu_item"
+            android:paddingRight="@dimen/margin_menu_right"
+            android:text="Chụp ảnh lên website"
+            android:textColor="@color/text_menu_title"
+            android:textSize="@dimen/text_menu" />
+
+        <TextView
+            android:id="@+id/menu_referral_code"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/menu_selector"
+            android:drawableLeft="@drawable/ic_business"
+            android:drawablePadding="@dimen/margin_list_big"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_menu_item"
+            android:paddingRight="@dimen/margin_menu_right"
+            android:text="Mã giới thiệu"
+            android:textColor="@color/text_menu_title"
+            android:textSize="@dimen/text_menu" />
+
+        <TextView
+            android:id="@+id/menu_news"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/menu_selector"
+            android:drawableLeft="@drawable/ic_info"
+            android:drawablePadding="@dimen/margin_list_big"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_menu_item"
+            android:paddingRight="@dimen/margin_menu_right"
+            android:text="Thông tin chính sách"
+            android:textColor="@color/text_menu_title"
+            android:textSize="@dimen/text_menu" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/menu_selector"
+            android:drawableLeft="@drawable/ic_logout"
+            android:drawablePadding="@dimen/margin_list_big"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_menu_item"
+            android:paddingRight="@dimen/margin_menu_right"
+            android:text="Đăng xuất"
+            android:textColor="@color/text_menu_title"
+            android:textSize="@dimen/text_menu" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_selector"
+                android:drawableLeft="@drawable/ic_support"
+                android:drawablePadding="@dimen/margin_list_big"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_menu_item"
+                android:paddingRight="@dimen/margin_menu_right"
+                android:text="Hỗ trợ"
+                android:textColor="@color/text_menu_title"
+                android:textSize="@dimen/text_menu" />
+
+            <TextView
+                android:id="@+id/menu_support"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_selector"
+                android:drawablePadding="@dimen/margin_list_big"
+                android:gravity="center_vertical"
+                android:text="@string/hot_line_number"
+                android:textColor="#FF6600"
+                android:textSize="@dimen/text_menu" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

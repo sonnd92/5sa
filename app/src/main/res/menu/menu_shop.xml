@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:mContext=".activity.shop.ShopActivity">
+    <!--<item
+        android:id="@+id/shop_action_notification"
+        android:icon="@drawable/toolbar_notifications"
+        android:orderInCategory="2"
+        android:title="@string/notification_toolbar_title"
+        app:showAsAction="always" />-->
+
+    <item
+        android:id="@+id/shop_action_notification"
+        android:icon="@drawable/ic_menu_notifications"
+        android:orderInCategory="2"
+        android:title="@string/notification_toolbar_title"
+        app:showAsAction="always" />
+
+</menu>

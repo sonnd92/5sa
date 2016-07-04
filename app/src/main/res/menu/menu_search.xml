@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:mContext=".activity.shipper.SearchActivity">
+
+    <item android:id="@+id/action_filter"
+        android:icon="@drawable/action_filter"
+        android:orderInCategory="2"
+        android:title="Bộ lọc"
+        app:showAsAction="always"/>
+</menu>

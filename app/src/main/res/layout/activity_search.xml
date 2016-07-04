@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB"
+    android:orientation="vertical"
+    tools:mContext="fiveship.vn.fiveship.activity.shipper.SearchActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Custom">
+
+        <include
+            layout="@layout/fiveship_action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/box_filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0k"
+                        android:textColor="#FF6600"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Tiền hàng"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text=">9.900k"
+                        android:textColor="#FF6600"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+                <com.appyvet.rangebar.RangeBar xmlns:custom="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/range_bar_pre_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    custom:connectingLineColor="@color/colorPrimary"
+                    custom:pinColor="@color/colorPrimary"
+                    custom:pinMaxFont="18sp"
+                    custom:pinMinFont="8sp"
+                    custom:selectorColor="@color/colorPrimary"
+                    custom:tickColor="@color/colorPrimary"
+                    custom:tickEnd="9900"
+                    custom:tickInterval="250"
+                    custom:tickStart="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0k"
+                        android:textColor="#FF6600"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Tiền ship"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text=">100k"
+                        android:textColor="#FF6600"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+                <com.appyvet.rangebar.RangeBar xmlns:custom="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/range_bar_shipping_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    custom:connectingLineColor="@color/colorPrimary"
+                    custom:pinColor="@color/colorPrimary"
+                    custom:pinMaxFont="18sp"
+                    custom:pinMinFont="8sp"
+                    custom:selectorColor="@color/colorPrimary"
+                    custom:tickColor="@color/colorPrimary"
+                    custom:tickEnd="100"
+                    custom:tickInterval="10"
+                    custom:tickStart="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0km"
+                        android:textColor="#FF6600"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Quãng đường (KM)"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="30 km"
+                        android:textColor="#FF6600"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+                <com.appyvet.rangebar.RangeBar xmlns:custom="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/range_bar_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    custom:connectingLineColor="@color/colorPrimary"
+                    custom:pinColor="@color/colorPrimary"
+                    custom:pinMaxFont="18sp"
+                    custom:pinMinFont="8sp"
+                    custom:selectorColor="@color/colorPrimary"
+                    custom:tickColor="@color/colorPrimary"
+                    custom:tickEnd="30"
+                    custom:tickInterval="1"
+                    custom:tickStart="0" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="Đặc tính sản phẩm"
+                android:textColor="@color/map_default_text_color"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:background="@color/fiveship_common_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cb_is_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/ic_nocheck"
+                    android:onClick="changeIsBig"
+                    android:padding="20dp"
+                    android:text="@string/weight_bigger_ten_kilo"
+                    android:textColor="@color/grey_DA"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/listview_divider" />
+
+                <TextView
+                    android:id="@+id/cb_is_big"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/ic_nocheck"
+                    android:onClick="changeIsBig"
+                    android:padding="20dp"
+                    android:text="Cồng kềnh"
+                    android:textColor="@color/grey_DA"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/listview_divider" />
+
+                <TextView
+                    android:id="@+id/cb_is_fragile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/ic_nocheck"
+                    android:onClick="changeIsBig"
+                    android:padding="20dp"
+                    android:text="Dễ vỡ"
+                    android:textColor="@color/grey_DA"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="Tiện đường"
+                android:textColor="@color/map_default_text_color"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:background="@color/fiveship_common_white"
+                android:orientation="vertical">
+
+                <AutoCompleteTextView
+                    android:id="@+id/start_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/direction_oranges"
+                    android:hint="Từ"
+                    android:padding="20dp"
+                    android:textColor="@color/grey_DA"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/listview_divider" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/end_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/directions"
+                    android:hint="Đến"
+                    android:padding="20dp"
+                    android:textColor="@color/grey_DA"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/fiveship_default_blue" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/box_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:visibility="gone">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search_bar"
+            android:layout_marginTop="1dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_data_binding"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/fiveship_list_background"
+                android:fadeScrollbars="true"
+                android:scrollbars="vertical" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/layout_loading"
+            layout="@layout/fiveship_loading_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <include
+            android:id="@+id/vs_no_result"
+            layout="@layout/fiveship_no_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/box_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_button_size"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@color/text_color_list_view_default"
+            android:gravity="center"
+            android:text="Chọn lại"
+            android:textColor="@color/fiveship_common_white" />
+
+        <Button
+            android:id="@+id/btn_filter"
+            style="@style/FiveShip.DialogStyle.Button"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@color/colorPrimary"
+            android:text="Lọc"
+            android:textColor="@color/fiveship_common_white" />
+
+        <View
+            style="@style/FiveShip.DialogStyle.ButtonDivider"
+            android:layout_width="1.0dip"
+            android:layout_height="fill_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

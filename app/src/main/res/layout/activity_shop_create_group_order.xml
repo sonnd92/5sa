@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:mContext=".activity.shop.ShopCreateGroupOrderActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/shop_ship_create_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Custom">
+
+        <include
+            android:id="@+id/shop_ship_create_toolbar"
+            layout="@layout/fiveship_action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/shop_ship_create_app_bar"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/fiveship_form_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--shop info-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/fiveship_common_white"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/shop_ship_create_backdrop"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_capture" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="Thông tin shop"
+                        android:textColor="#383C47" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/ic_change_shipping_cost"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:onClick="EditShopInfo"
+                        android:text="Sửa thông tin"
+                        android:textColor="#9a9a9a" />
+
+                    <!-- <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginBottom="10dp"
+                         android:layout_marginTop="10dp"
+                         android:layout_weight="0"
+                         android:drawableLeft="@drawable/ic_edit_info"
+                         android:drawablePadding="10dp"
+                         android:text="Sửa thông tin"
+                         android:textColor="#A1A1A1"
+                         android:textSize="11dp" />-->
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_summary_shop_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/fiveship_common_white"
+                    android:drawableLeft="@drawable/ic_shop"
+                    android:drawablePadding="20dp"
+                    android:drawableRight="@drawable/ic_right_arrow"
+                    android:gravity="center_vertical"
+                    android:onClick="EditShopInfo"
+                    android:padding="15dp"
+                    android:singleLine="true" />
+
+                <LinearLayout
+                    android:id="@+id/box_shop_create_from_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:visibility="gone">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/FloatingHintLabel">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/txt_shop_ship_create_from_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_shop"
+                            android:drawablePadding="20dp"
+                            android:hint="Nhập cửa hàng (*)"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/FloatingHintLabel">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/txt_shop_ship_create_from_phone"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_phone"
+                            android:drawablePadding="20dp"
+                            android:hint="Nhập số điện thoại (*)"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:singleLine="true" />
+
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/FloatingHintLabel">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/txt_shop_ship_create_from_home"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_home"
+                            android:drawablePadding="20dp"
+                            android:hint="Số nhà/ Ngõ / Ngách"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:textCursorDrawable="@null" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/FloatingHintLabel">
+
+                            <fiveship.vn.fiveship.widget.DelayAutocompleteTextView
+                                android:id="@+id/txt_shop_ship_create_from_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_marker"
+                                android:drawablePadding="20dp"
+                                android:drawableStart="@drawable/ic_marker"
+                                android:hint="Đường phố (*)"
+                                android:imeOptions="flagNoExtractUi|actionSearch"
+                                android:singleLine="true"
+                                android:textCursorDrawable="@null" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <com.victor.loading.rotate.RotateLoading
+                            android:id="@+id/li_received_add"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="end"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:loading_color="@color/colorPrimary"
+                            app:loading_width="2dp" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/list_ship_delivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/delivery_input_form_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/title_order_fx"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="15dp"
+                        android:text="Thông tin đơn hàng 01"
+                        android:textColor="#383C47" />
+
+                    <ImageView
+                        android:id="@+id/remove_order_info"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/selector"
+                        android:onClick="HideInputDelivery"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_remove_small"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/delivery_input_form_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/fiveship_common_white"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/FloatingHintLabel"
+                        android:visibility="gone">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3.0dip"
+                            android:layout_marginRight="3.0dip"
+                            android:orientation="horizontal">
+
+                            <fiveship.vn.fiveship.widget.DelayAutocompleteTextView
+                                android:id="@+id/txt_customer_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableLeft="@drawable/ic_phone"
+                                android:drawablePadding="10dp"
+                                android:drawableStart="@drawable/ic_phone"
+                                android:hint="Số điện thoại khách (*)"
+                                android:imeOptions="actionNext"
+                                android:inputType="phone"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="0dp"
+                                android:singleLine="true"
+                                android:textCursorDrawable="@null" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <com.victor.loading.rotate.RotateLoading
+                            android:id="@+id/li_suggest_customer"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="end"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            app:loading_color="@color/colorPrimary"
+                            app:loading_width="2dp" />
+
+                    </FrameLayout>
+
+                    <!--<android.support.design.widget.TextInputLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/FloatingHintLabel">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/txt_shop_ship_create_to_home"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_home"
+                            android:drawablePadding="10dp"
+                            android:hint="Số nhà/ Ngõ / Ngách"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true" />
+
+                    </android.support.design.widget.TextInputLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/FloatingHintLabel">
+
+                                <fiveship.vn.fiveship.widget.DelayAutocompleteTextView
+                                    android:id="@+id/txt_shop_ship_create_to_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableLeft="@drawable/ic_marker"
+                                    android:drawablePadding="10dp"
+                                    android:drawableStart="@drawable/ic_marker"
+                                    android:hint="Đường phố (*)"
+                                    android:imeOptions="flagNoExtractUi|actionSearch" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <com.victor.loading.rotate.RotateLoading
+                                android:id="@+id/li_delivery_add"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="end"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="20dp"
+                                app:loading_color="@color/colorPrimary"
+                                app:loading_width="2dp" />
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/FloatingHintLabel">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/txt_shop_ship_create_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_time"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@drawable/ic_arrow_down"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="Thời gian giao hàng"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:textCursorDrawable="@null" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/box_shop_ship_create_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F0F0F0"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/ic_nocheck"
+                            android:onClick="setTextShipDate"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="10dp"
+                            android:text="Giao ngay"
+                            android:textColor="#53535D"
+                            android:textSize="16.0sp" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:background="#E6E5E1" />
+
+                        <TextView
+                            android:id="@+id/lbl_this_morning"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/ic_nocheck"
+                            android:onClick="setTextShipDate"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="10dp"
+                            android:text="Sáng nay"
+                            android:textColor="#53535D"
+                            android:textSize="16.0sp" />
+
+                        <View
+                            android:id="@+id/lbl_this_morning_line"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:background="#E6E5E1" />
+
+                        <TextView
+                            android:id="@+id/lbl_this_afternoon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/ic_nocheck"
+                            android:onClick="setTextShipDate"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="10dp"
+                            android:text="Chiều nay"
+                            android:textColor="#53535D"
+                            android:textSize="16.0sp" />
+
+                        <View
+                            android:id="@+id/lbl_this_afternoon_line"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:background="#E6E5E1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/ic_nocheck"
+                            android:onClick="setTextShipDate"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="10dp"
+                            android:text="Tối nay"
+                            android:textColor="#53535D"
+                            android:textSize="16.0sp" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:background="#E6E5E1" />
+
+                        <TextView
+                            android:id="@+id/lbl_specific_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/ic_nocheck"
+                            android:onClick="setTextShipDate"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="10dp"
+                            android:text="Giờ cụ thể trong ngày"
+                            android:textColor="#53535D"
+                            android:textSize="16.0sp" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:background="#E6E5E1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/ic_nocheck"
+                            android:onClick="setTextShipDate"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="10dp"
+                            android:text="Sáng mai"
+                            android:textColor="#53535D"
+                            android:textSize="16.0sp" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:background="#E6E5E1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/ic_nocheck"
+                            android:onClick="setTextShipDate"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="10dp"
+                            android:text="Chiều mai"
+                            android:textColor="#53535D"
+                            android:textSize="16.0sp" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:background="#E6E5E1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/ic_nocheck"
+                            android:onClick="setTextShipDate"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="10dp"
+                            android:text="Tối mai"
+                            android:textColor="#53535D"
+                            android:textSize="16.0sp" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:background="#E6E5E1" />
+
+                        <TextView
+                            android:id="@+id/lbl_specific_tomorrow_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/ic_nocheck"
+                            android:onClick="setTextShipDate"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="10dp"
+                            android:text="Giờ cụ thể ngày mai"
+                            android:textColor="#53535D"
+                            android:textSize="16.0sp" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:background="#E6E5E1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pre_pay_and_shipping_cost_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:theme="@style/FloatingHintLabel">
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/txt_shop_ship_create_cost"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableEnd="@drawable/ic_k"
+                                android:drawableLeft="@drawable/ic_money"
+                                android:drawablePadding="10dp"
+                                android:drawableRight="@drawable/ic_k"
+                                android:drawableStart="@drawable/ic_money"
+                                android:hint="Tiền hàng"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal|numberSigned"
+                                android:singleLine="true" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:theme="@style/FloatingHintLabel">
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/txt_shop_ship_create_cost_ship"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableEnd="@drawable/ic_k"
+                                android:drawableLeft="@drawable/ic_money"
+                                android:drawablePadding="10dp"
+                                android:drawableRight="@drawable/ic_k"
+                                android:drawableStart="@drawable/ic_money"
+                                android:hint="Tiền ship (*)"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal|numberSigned"
+                                android:singleLine="true" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/FloatingHintLabel">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/txt_shop_ship_create_note"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_note"
+                            android:drawablePadding="10dp"
+                            android:hint="Ghi chú"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                     <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/FloatingHintLabel">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/txt_shop_ship_create_to_distance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_distance"
+                            android:drawablePadding="10dp"
+                            android:hint="Khoảng cách"
+                            android:enabled="false"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/add_new_delivery_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/fiveship_common_white"
+                        android:text="Thêm địa chỉ nhận hàng" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="15dp"
+                    android:text="Mã khuyến mại"
+                    android:textColor="#383C47" />
+
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/FloatingHintLabel">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/txt_shop_ship_promotion_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_tag"
+                            android:drawablePadding="20dp"
+                            android:hint="Mã khuyến mãi"
+                            android:imeOptions="flagNoExtractUi|actionSearch"
+                            android:singleLine="true"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <com.victor.loading.rotate.RotateLoading
+                        android:id="@+id/li_promotion_code"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="end"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        app:loading_color="@color/colorPrimary"
+                        app:loading_width="2dp" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="15dp"
+                    android:text="Tổng tiền"
+                    android:textColor="#383C47" />
+
+                <LinearLayout
+                    android:id="@+id/is_group_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/fiveship_common_white"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.0dip"
+                        android:layout_marginRight="3.0dip"
+                        android:orientation="horizontal"
+                        android:theme="@style/FloatingHintLabel">
+
+                        <fiveship.vn.fiveship.widget.DelayAutocompleteTextView
+                            android:id="@+id/txt_shop_ship_create_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_order"
+                            android:drawablePadding="20dp"
+                            android:drawableStart="@drawable/ic_order"
+                            android:hint="Tên đơn hàng"
+                            android:imeOptions="flagNoExtractUi|actionNext"
+                            android:singleLine="true"
+                            android:textCursorDrawable="@null" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.0dip"
+                        android:layout_marginRight="3.0dip"
+                        android:theme="@style/FloatingHintLabel">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/txt_total_pre_pay_cost"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_k"
+                            android:drawableLeft="@drawable/ic_money"
+                            android:drawablePadding="20dp"
+                            android:drawableRight="@drawable/ic_k"
+                            android:drawableStart="@drawable/ic_money"
+                            android:hint="Tổng tiền hàng"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:singleLine="true" />
+
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.0dip"
+                        android:layout_marginRight="3.0dip"
+                        android:theme="@style/FloatingHintLabel">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/txt_total_shipping_cost"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_k"
+                            android:drawableLeft="@drawable/ic_money"
+                            android:drawablePadding="20dp"
+                            android:drawableRight="@drawable/ic_k"
+                            android:drawableStart="@drawable/ic_money"
+                            android:hint="Tổng tiền ship đề xuất (*)"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:singleLine="true" />
+
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_shop_ship_create_group_submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="#FF6600"
+                android:text="Tạo đơn hàng"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

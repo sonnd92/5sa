@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:mContext=".activity.shipper.DetailOrderActivity">
+    <item
+        android:id="@+id/menu_contact_and_support"
+        app:showAsAction="collapseActionView"
+        android:title="@string/menu_detail_contact_and_support_title"
+        android:titleCondensed="lessThanFiftyK"/>
+    <item
+        android:id="@+id/menu_feedback"
+        android:title="@string/menu_detail_feedback_title"
+        app:showAsAction="collapseActionView"/>
+</menu>

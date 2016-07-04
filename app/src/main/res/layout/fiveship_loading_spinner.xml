@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProgressBar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pb_loading"
+    style="@android:style/Widget.ProgressBar.Small"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:foregroundGravity="center"
+    android:indeterminate="true"
+    android:indeterminateDrawable="@drawable/loading_ic_s"
+    android:maxHeight="70.0dip"
+    android:maxWidth="70.0dip"
+    android:minHeight="70.0dip"
+    android:minWidth="70.0dip" />

@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:mContext=".activity.shipper.HistoryFragment">
+    <item android:id="@+id/edit_custom_info" android:title="Cập nhật tài khoản"
+        android:icon="@drawable/ic_edit_accout"
+        android:orderInCategory="1" app:showAsAction="ifRoom" />
+    <item android:id="@+id/edit_custom_logout" android:title="Đăng xuất"
+        android:icon="@drawable/ic_logout_account"
+        android:orderInCategory="1" app:showAsAction="ifRoom" />
+</menu>

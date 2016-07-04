@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:mContext=".activity.shop.ShopShipTemplateFragment">
+
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF">
+
+        <EditText
+            android:id="@+id/txt_ship_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="20dp"
+            android:background="@color/transparent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:hint="Tìm kiếm mẫu đơn hàng"
+            android:textColor="#C6C6C6"
+            android:textColorHint="#C6C6C6"/>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_marginTop="1dp"
+        android:id="@+id/swipe_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_bar">
+
+        <ListView
+            android:id="@+id/ship_template_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="40dp"
+            android:background="#fff"
+            android:choiceMode="singleChoice"
+            android:divider="@color/fiveship_list_background"
+            android:dividerHeight="1dp"
+            android:listSelector="@drawable/selector"
+            android:nestedScrollingEnabled="false" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btn_shop_ship_create_template"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Thêm mới mẫu đơn hàng"
+            android:textColor="#ffffff"
+            android:background="#FF6600"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layout_loading"
+        layout="@layout/fiveship_loading_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <include
+        layout="@layout/fiveship_no_result"
+        android:id="@+id/vs_no_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arr_shipping_order_tab_title">
+        <item>@string/title_map_tab</item>
+        <item>@string/shipping_order_new</item>
+        <!--<item>@string/shipping_order_nearly</item>
+        <item>@string/shipping_order_recived</item>
+        <item>@string/shipping_order_completed</item>-->
+    </string-array>
+    <string-array name="arr_login_register_tab_title">
+        <item>@string/login_tab</item>
+        <item>@string/register_tab</item>
+    </string-array>
+    <string-array name="arr_shipper_manager_tab_title">
+        <item>@string/shipper_mng_all_title</item>
+        <item>@string/shipper_mng_familiar_title</item>
+        <item>@string/shipper_mng_block_title</item>
+    </string-array>
+    <string-array name="arr_shipper_order_mng_tab_title">
+        <item>Tất cả</item>
+        <item>Chờ shop chọn</item>
+        <item>Lấy hàng</item>
+        <item>Đang giao</item>
+        <item>Đã giao</item>
+        <item>Kết thúc</item>
+        <item>Hủy</item>
+
+    </string-array>
+    <string-array name="arr_shop_order_mng_tab_title">
+        <item>Tất cả</item>
+        <item>Đơn chờ shipper</item>
+        <item>Chờ nhận hàng</item>
+        <item>Đang giao</item>
+        <item>Đã giao</item>
+        <item>Kết thúc</item>
+        <item>Hủy</item>
+    </string-array>
+    <string-array name="arr_news_and_policy_tab_title">
+        <item>Bảng tin mới nhất</item>
+        <item>Thông tin chính sách</item>
+    </string-array>
+</resources>

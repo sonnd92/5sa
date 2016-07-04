@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fiveship_common_white"
+    android:padding="10dp"
+    tools:mContext=".activity.shop.ShopShipCreateInviteShipperDialogFragment">
+
+    <TextView
+        android:id="@+id/cb_shop_ship_create_detail_near"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:drawableRight="@drawable/ic_nocheck"
+        android:textColor="#41434F"
+        android:textSize="16.0sp"
+        android:clickable="true"
+        android:onClick="setTextShipDate"
+        android:text="Shipper gần đây"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="#F0F0F0" />
+
+    <TextView
+        android:id="@+id/cb_shop_ship_create_detail_safe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:drawableRight="@drawable/ic_nocheck"
+        android:textColor="#41434F"
+        android:textSize="16.0sp"
+        android:clickable="true"
+        android:onClick="setTextShipDate"
+        android:text="Shipper đã xác thực"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#F0F0F0" />
+
+    <AutoCompleteTextView
+        android:id="@+id/txt_shop_ship_create_detail_list_shipper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="20dp"
+        android:padding="15dp"
+        android:gravity="center_vertical"
+        android:hint="Chọn shipper ruột"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:textColor="@color/fiveship_edit_text_login"
+        android:textColorHint="@color/fiveship_txt_color_hint_white"
+        android:textCursorDrawable="@null"
+        android:textSize="18.0sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#F0F0F0" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/list_shipper_amity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
